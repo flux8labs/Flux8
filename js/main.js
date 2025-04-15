@@ -11,7 +11,7 @@ $(function () {
         containers: ['#swupMain', '#swupMenu'],
         animateHistoryBrowsing: true,
         linkSelector: 'a:not([data-no-swup])',
-        animationSelector: '[class="mil-main-transition"]'
+        animationSelector: '[class="Flux-main-transition"]'
     };
     const swup = new Swup(options);
 
@@ -39,12 +39,12 @@ $(function () {
 
     var timeline = gsap.timeline();
 
-    timeline.to(".mil-preloader-animation", {
+    timeline.to(".Flux-preloader-animation", {
         opacity: 1,
     });
 
     timeline.fromTo(
-        ".mil-animation-1 .mil-h3", {
+        ".Flux-animation-1 .Flux-h3", {
             y: "30px",
             opacity: 0
         }, {
@@ -54,42 +54,42 @@ $(function () {
         },
     );
 
-    timeline.to(".mil-animation-1 .mil-h3", {
+    timeline.to(".Flux-animation-1 .Flux-h3", {
         opacity: 0,
         y: '-30',
     }, "+=.3");
 
-    timeline.fromTo(".mil-reveal-box", 0.1, {
+    timeline.fromTo(".Flux-reveal-box", 0.1, {
         opacity: 0,
     }, {
         opacity: 1,
         x: '-30',
     });
 
-    timeline.to(".mil-reveal-box", 0.45, {
+    timeline.to(".Flux-reveal-box", 0.45, {
         width: "100%",
         x: 0,
     }, "+=.1");
-    timeline.to(".mil-reveal-box", {
+    timeline.to(".Flux-reveal-box", {
         right: "0"
     });
-    timeline.to(".mil-reveal-box", 0.3, {
+    timeline.to(".Flux-reveal-box", 0.3, {
         width: "0%"
     });
-    timeline.fromTo(".mil-animation-2 .mil-h3", {
+    timeline.fromTo(".Flux-animation-2 .Flux-h3", {
         opacity: 0,
     }, {
         opacity: 1,
     }, "-=.5");
-    timeline.to(".mil-animation-2 .mil-h3", 0.6, {
+    timeline.to(".Flux-animation-2 .Flux-h3", 0.6, {
         opacity: 0,
         y: '-30'
     }, "+=.5");
-    timeline.to(".mil-preloader", 0.8, {
+    timeline.to(".Flux-preloader", 0.8, {
         opacity: 0,
         ease: 'sine',
     }, "+=.2");
-    timeline.fromTo(".mil-up", 0.8, {
+    timeline.fromTo(".Flux-up", 0.8, {
         opacity: 0,
         y: 40,
         scale: .98,
@@ -100,7 +100,7 @@ $(function () {
         opacity: 1,
         scale: 1,
         onComplete: function () {
-            $('.mil-preloader').addClass("mil-hidden");
+            $('.Flux-preloader').addClass("Flux-hidden");
         },
     }, "-=1");
     /***************************
@@ -128,10 +128,10 @@ $(function () {
 
     ***************************/
     $(document).ready(function () {
-        $(".mil-arrow").clone().appendTo(".mil-arrow-place");
-        $(".mil-dodecahedron").clone().appendTo(".mil-animation");
-        $(".mil-lines").clone().appendTo(".mil-lines-place");
-        $(".mil-main-menu ul li.mil-active > a").clone().appendTo(".mil-current-page");
+        $(".Flux-arrow").clone().appendTo(".Flux-arrow-place");
+        $(".Flux-dodecahedron").clone().appendTo(".Flux-animation");
+        $(".Flux-lines").clone().appendTo(".Flux-lines-place");
+        $(".Flux-main-menu ul li.Flux-active > a").clone().appendTo(".Flux-current-page");
     });
     /***************************
 
@@ -139,8 +139,8 @@ $(function () {
 
     ***************************/
 
-    let groups = gsap.utils.toArray(".mil-accordion-group");
-    let menus = gsap.utils.toArray(".mil-accordion-menu");
+    let groups = gsap.utils.toArray(".Flux-accordion-group");
+    let menus = gsap.utils.toArray(".Flux-accordion-menu");
     let menuToggles = groups.map(createAnimation);
 
     menus.forEach((menu) => {
@@ -152,11 +152,11 @@ $(function () {
     }
 
     function createAnimation(element) {
-        let menu = element.querySelector(".mil-accordion-menu");
-        let box = element.querySelector(".mil-accordion-content");
-        let symbol = element.querySelector(".mil-symbol");
-        let minusElement = element.querySelector(".mil-minus");
-        let plusElement = element.querySelector(".mil-plus");
+        let menu = element.querySelector(".Flux-accordion-menu");
+        let box = element.querySelector(".Flux-accordion-content");
+        let symbol = element.querySelector(".Flux-symbol");
+        let minusElement = element.querySelector(".Flux-minus");
+        let plusElement = element.querySelector(".Flux-plus");
 
         gsap.set(box, {
             height: "auto",
@@ -198,7 +198,7 @@ $(function () {
     back to top
 
     ***************************/
-    const btt = document.querySelector(".mil-back-to-top .mil-link");
+    const btt = document.querySelector(".Flux-back-to-top .Flux-link");
 
     gsap.set(btt, {
         x: -30,
@@ -221,7 +221,7 @@ $(function () {
     cursor
 
     ***************************/
-    const cursor = document.querySelector('.mil-ball');
+    const cursor = document.querySelector('.Flux-ball');
 
     gsap.set(cursor, {
         xPercent: -50,
@@ -239,7 +239,7 @@ $(function () {
         });
     }
 
-    $('.mil-drag, .mil-more, .mil-choose').mouseover(function () {
+    $('.Flux-drag, .Flux-more, .Flux-choose').mouseover(function () {
         gsap.to($(cursor), .2, {
             width: 90,
             height: 90,
@@ -248,7 +248,7 @@ $(function () {
         });
     });
 
-    $('.mil-drag, .mil-more, .mil-choose').mouseleave(function () {
+    $('.Flux-drag, .Flux-more, .Flux-choose').mouseleave(function () {
         gsap.to($(cursor), .2, {
             width: 20,
             height: 20,
@@ -257,81 +257,81 @@ $(function () {
         });
     });
 
-    $('.mil-accent-cursor').mouseover(function () {
+    $('.Flux-accent-cursor').mouseover(function () {
         gsap.to($(cursor), .2, {
             background: accent,
             ease: 'sine',
         });
-        $(cursor).addClass('mil-accent');
+        $(cursor).addClass('Flux-accent');
     });
 
-    $('.mil-accent-cursor').mouseleave(function () {
+    $('.Flux-accent-cursor').mouseleave(function () {
         gsap.to($(cursor), .2, {
             background: dark,
             ease: 'sine',
         });
-        $(cursor).removeClass('mil-accent');
+        $(cursor).removeClass('Flux-accent');
     });
 
-    $('.mil-drag').mouseover(function () {
-        gsap.to($('.mil-ball .mil-icon-1'), .2, {
+    $('.Flux-drag').mouseover(function () {
+        gsap.to($('.Flux-ball .Flux-icon-1'), .2, {
             scale: '1',
             ease: 'sine',
         });
     });
 
-    $('.mil-drag').mouseleave(function () {
-        gsap.to($('.mil-ball .mil-icon-1'), .2, {
+    $('.Flux-drag').mouseleave(function () {
+        gsap.to($('.Flux-ball .Flux-icon-1'), .2, {
             scale: '0',
             ease: 'sine',
         });
     });
 
-    $('.mil-more').mouseover(function () {
-        gsap.to($('.mil-ball .mil-more-text'), .2, {
+    $('.Flux-more').mouseover(function () {
+        gsap.to($('.Flux-ball .Flux-more-text'), .2, {
             scale: '1',
             ease: 'sine',
         });
     });
 
-    $('.mil-more').mouseleave(function () {
-        gsap.to($('.mil-ball .mil-more-text'), .2, {
+    $('.Flux-more').mouseleave(function () {
+        gsap.to($('.Flux-ball .Flux-more-text'), .2, {
             scale: '0',
             ease: 'sine',
         });
     });
 
-    $('.mil-choose').mouseover(function () {
-        gsap.to($('.mil-ball .mil-choose-text'), .2, {
+    $('.Flux-choose').mouseover(function () {
+        gsap.to($('.Flux-ball .Flux-choose-text'), .2, {
             scale: '1',
             ease: 'sine',
         });
     });
 
-    $('.mil-choose').mouseleave(function () {
-        gsap.to($('.mil-ball .mil-choose-text'), .2, {
+    $('.Flux-choose').mouseleave(function () {
+        gsap.to($('.Flux-ball .Flux-choose-text'), .2, {
             scale: '0',
             ease: 'sine',
         });
     });
 
-    $('a:not(".mil-choose , .mil-more , .mil-drag , .mil-accent-cursor"), input , textarea, .mil-accordion-menu').mouseover(function () {
+    $('a:not(".Flux-choose , .Flux-more , .Flux-drag , .Flux-accent-cursor"), input , textarea, .Flux-accordion-menu').mouseover(function () {
         gsap.to($(cursor), .2, {
             scale: 0,
             ease: 'sine',
         });
-        gsap.to($('.mil-ball svg'), .2, {
+        gsap.to($('.Flux-ball svg'), .2, {
             scale: 0,
         });
     });
 
-    $('a:not(".mil-choose , .mil-more , .mil-drag , .mil-accent-cursor"), input, textarea, .mil-accordion-menu').mouseleave(function () {
+    $('a:not(".Flux-choose , .Flux-more , .Flux-drag , .Flux-accent-cursor"), input, textarea, .Flux-accordion-menu').mouseleave(function () {
         gsap.to($(cursor), .2, {
             scale: 1,
             ease: 'sine',
         });
 
-        gsap.to($('.mil-ball svg'), .2, {
+        gsap.to($('.Flux-ball svg'), .2, {
             scale: 1,
         });
     });
@@ -353,28 +353,28 @@ $(function () {
      menu
 
     ***************************/
-    $('.mil-menu-btn').on("click", function () {
-        $('.mil-menu-btn').toggleClass('mil-active');
-        $('.mil-menu').toggleClass('mil-active');
-        $('.mil-menu-frame').toggleClass('mil-active');
+    $('.Flux-menu-btn').on("click", function () {
+        $('.Flux-menu-btn').toggleClass('Flux-active');
+        $('.Flux-menu').toggleClass('Flux-active');
+        $('.Flux-menu-frame').toggleClass('Flux-active');
     });
     /***************************
 
     main menu
 
     ***************************/
-    $('.mil-has-children a').on('click', function () {
-        $('.mil-has-children ul').removeClass('mil-active');
-        $('.mil-has-children a').removeClass('mil-active');
-        $(this).toggleClass('mil-active');
-        $(this).next().toggleClass('mil-active');
+    $('.Flux-has-children a').on('click', function () {
+        $('.Flux-has-children ul').removeClass('Flux-active');
+        $('.Flux-has-children a').removeClass('Flux-active');
+        $(this).toggleClass('Flux-active');
+        $(this).next().toggleClass('Flux-active');
     });
     /***************************
 
     progressbar
 
     ***************************/
-    gsap.to('.mil-progress', {
+    gsap.to('.Flux-progress', {
         height: '100%',
         ease: 'sine',
         scrollTrigger: {
@@ -387,7 +387,7 @@ $(function () {
 
     ***************************/
 
-    const appearance = document.querySelectorAll(".mil-up");
+    const appearance = document.querySelectorAll(".Flux-up");
 
     appearance.forEach((section) => {
         gsap.fromTo(section, {
@@ -408,7 +408,7 @@ $(function () {
         });
     });
 
-    const scaleImage = document.querySelectorAll(".mil-scale");
+    const scaleImage = document.querySelectorAll(".Flux-scale");
 
     scaleImage.forEach((section) => {
         var value1 = $(section).data("value-1");
@@ -427,7 +427,7 @@ $(function () {
         });
     });
 
-    const parallaxImage = document.querySelectorAll(".mil-parallax");
+    const parallaxImage = document.querySelectorAll(".Flux-parallax");
 
 
     if ($(window).width() > 960) {
@@ -449,7 +449,7 @@ $(function () {
         });
     }
 
-    const rotate = document.querySelectorAll(".mil-rotate");
+    const rotate = document.querySelectorAll(".Flux-rotate");
 
     rotate.forEach((section) => {
         var value = $(section).data("value");
@@ -488,11 +488,11 @@ $(function () {
 
     ***************************/
 
-    var menu = ['<div class="mil-custom-dot mil-slide-1"></div>', '<div class="mil-custom-dot mil-slide-2"></div>', '<div class="mil-custom-dot mil-slide-3"></div>', '<div class="mil-custom-dot mil-slide-4"></div>', '<div class="mil-custom-dot mil-slide-5"></div>', '<div class="mil-custom-dot mil-slide-6"></div>', '<div class="mil-custom-dot mil-slide-7"></div>']
-    var mySwiper = new Swiper('.mil-reviews-slider', {
+    var menu = ['<div class="Flux-custom-dot Flux-slide-1"></div>', '<div class="Flux-custom-dot Flux-slide-2"></div>', '<div class="Flux-custom-dot Flux-slide-3"></div>', '<div class="Flux-custom-dot Flux-slide-4"></div>', '<div class="Flux-custom-dot Flux-slide-5"></div>', '<div class="Flux-custom-dot Flux-slide-6"></div>', '<div class="Flux-custom-dot Flux-slide-7"></div>']
+    var mySwiper = new Swiper('.Flux-reviews-slider', {
         // If we need pagination
         pagination: {
-            el: '.mil-revi-pagination',
+            el: '.Flux-revi-pagination',
             clickable: true,
             renderBullet: function (index, className) {
                 return '<span class="' + className + '">' + (menu[index]) + '</span>';
@@ -502,8 +502,8 @@ $(function () {
         effect: 'fade',
         parallax: true,
         navigation: {
-            nextEl: '.mil-revi-next',
-            prevEl: '.mil-revi-prev',
+            nextEl: '.Flux-revi-next',
+            prevEl: '.Flux-revi-prev',
         },
     })
 
@@ -512,7 +512,7 @@ $(function () {
     infinite slider
 
     ***************************/
-    var swiper = new Swiper('.mil-infinite-show', {
+    var swiper = new Swiper('.Flux-infinite-show', {
         slidesPerView: 2,
         spaceBetween: 30,
         speed: 5000,
@@ -534,7 +534,7 @@ $(function () {
     portfolio slider
 
     ***************************/
-    var swiper = new Swiper('.mil-portfolio-slider', {
+    var swiper = new Swiper('.Flux-portfolio-slider', {
         slidesPerView: 1,
         spaceBetween: 0,
         speed: 800,
@@ -543,8 +543,8 @@ $(function () {
             enable: true
         },
         navigation: {
-            nextEl: '.mil-portfolio-next',
-            prevEl: '.mil-portfolio-prev',
+            nextEl: '.Flux-portfolio-next',
+            prevEl: '.Flux-portfolio-prev',
         },
         pagination: {
             el: '.swiper-portfolio-pagination',
@@ -556,14 +556,14 @@ $(function () {
     1 item slider
 
     ***************************/
-    var swiper = new Swiper('.mil-1-slider', {
+    var swiper = new Swiper('.Flux-1-slider', {
         slidesPerView: 1,
         spaceBetween: 30,
         speed: 800,
         parallax: true,
         navigation: {
-            nextEl: '.mil-portfolio-next',
-            prevEl: '.mil-portfolio-prev',
+            nextEl: '.Flux-portfolio-next',
+            prevEl: '.Flux-portfolio-prev',
         },
         pagination: {
             el: '.swiper-portfolio-pagination',
@@ -575,14 +575,14 @@ $(function () {
     2 item slider
 
     ***************************/
-    var swiper = new Swiper('.mil-2-slider', {
+    var swiper = new Swiper('.Flux-2-slider', {
         slidesPerView: 1,
         spaceBetween: 30,
         speed: 800,
         parallax: true,
         navigation: {
-            nextEl: '.mil-portfolio-next',
-            prevEl: '.mil-portfolio-prev',
+            nextEl: '.Flux-portfolio-next',
+            prevEl: '.Flux-portfolio-prev',
         },
         pagination: {
             el: '.swiper-portfolio-pagination',
@@ -608,7 +608,7 @@ $(function () {
             scrollTop: 0,
         }, 0);
 
-        gsap.to('.mil-progress', {
+        gsap.to('.Flux-progress', {
             height: 0,
             ease: 'sine',
             onComplete: () => {
@@ -620,20 +620,20 @@ $(function () {
          menu
 
         ***************************/
-        $('.mil-menu-btn').removeClass('mil-active');
-        $('.mil-menu').removeClass('mil-active');
-        $('.mil-menu-frame').removeClass('mil-active');
+        $('.Flux-menu-btn').removeClass('Flux-active');
+        $('.Flux-menu').removeClass('Flux-active');
+        $('.Flux-menu-frame').removeClass('Flux-active');
         /***************************
 
         append
 
         ***************************/
         $(document).ready(function () {
-            $(".mil-arrow-place .mil-arrow, .mil-animation .mil-dodecahedron, .mil-current-page a").remove();
-            $(".mil-arrow").clone().appendTo(".mil-arrow-place");
-            $(".mil-dodecahedron").clone().appendTo(".mil-animation");
-            $(".mil-lines").clone().appendTo(".mil-lines-place");
-            $(".mil-main-menu ul li.mil-active > a").clone().appendTo(".mil-current-page");
+            $(".Flux-arrow-place .Flux-arrow, .Flux-animation .Flux-dodecahedron, .Flux-current-page a").remove();
+            $(".Flux-arrow").clone().appendTo(".Flux-arrow-place");
+            $(".Flux-dodecahedron").clone().appendTo(".Flux-animation");
+            $(".Flux-lines").clone().appendTo(".Flux-lines-place");
+            $(".Flux-main-menu ul li.Flux-active > a").clone().appendTo(".Flux-current-page");
         });
         /***************************
 
@@ -641,8 +641,8 @@ $(function () {
 
         ***************************/
 
-        let groups = gsap.utils.toArray(".mil-accordion-group");
-        let menus = gsap.utils.toArray(".mil-accordion-menu");
+        let groups = gsap.utils.toArray(".Flux-accordion-group");
+        let menus = gsap.utils.toArray(".Flux-accordion-menu");
         let menuToggles = groups.map(createAnimation);
 
         menus.forEach((menu) => {
@@ -654,11 +654,11 @@ $(function () {
         }
 
         function createAnimation(element) {
-            let menu = element.querySelector(".mil-accordion-menu");
-            let box = element.querySelector(".mil-accordion-content");
-            let symbol = element.querySelector(".mil-symbol");
-            let minusElement = element.querySelector(".mil-minus");
-            let plusElement = element.querySelector(".mil-plus");
+            let menu = element.querySelector(".Flux-accordion-menu");
+            let box = element.querySelector(".Flux-accordion-content");
+            let symbol = element.querySelector(".Flux-symbol");
+            let minusElement = element.querySelector(".Flux-minus");
+            let plusElement = element.querySelector(".Flux-plus");
 
             gsap.set(box, {
                 height: "auto",
@@ -702,7 +702,7 @@ $(function () {
 
         ***************************/
 
-        $('.mil-drag, .mil-more, .mil-choose').mouseover(function () {
+        $('.Flux-drag, .Flux-more, .Flux-choose').mouseover(function () {
             gsap.to($(cursor), .2, {
                 width: 90,
                 height: 90,
@@ -711,7 +711,7 @@ $(function () {
             });
         });
 
-        $('.mil-drag, .mil-more, .mil-choose').mouseleave(function () {
+        $('.Flux-drag, .Flux-more, .Flux-choose').mouseleave(function () {
             gsap.to($(cursor), .2, {
                 width: 20,
                 height: 20,
@@ -720,81 +720,81 @@ $(function () {
             });
         });
 
-        $('.mil-accent-cursor').mouseover(function () {
+        $('.Flux-accent-cursor').mouseover(function () {
             gsap.to($(cursor), .2, {
                 background: accent,
                 ease: 'sine',
             });
-            $(cursor).addClass('mil-accent');
+            $(cursor).addClass('Flux-accent');
         });
 
-        $('.mil-accent-cursor').mouseleave(function () {
+        $('.Flux-accent-cursor').mouseleave(function () {
             gsap.to($(cursor), .2, {
                 background: dark,
                 ease: 'sine',
             });
-            $(cursor).removeClass('mil-accent');
+            $(cursor).removeClass('Flux-accent');
         });
 
-        $('.mil-drag').mouseover(function () {
-            gsap.to($('.mil-ball .mil-icon-1'), .2, {
+        $('.Flux-drag').mouseover(function () {
+            gsap.to($('.Flux-ball .Flux-icon-1'), .2, {
                 scale: '1',
                 ease: 'sine',
             });
         });
 
-        $('.mil-drag').mouseleave(function () {
-            gsap.to($('.mil-ball .mil-icon-1'), .2, {
+        $('.Flux-drag').mouseleave(function () {
+            gsap.to($('.Flux-ball .Flux-icon-1'), .2, {
                 scale: '0',
                 ease: 'sine',
             });
         });
 
-        $('.mil-more').mouseover(function () {
-            gsap.to($('.mil-ball .mil-more-text'), .2, {
+        $('.Flux-more').mouseover(function () {
+            gsap.to($('.Flux-ball .Flux-more-text'), .2, {
                 scale: '1',
                 ease: 'sine',
             });
         });
 
-        $('.mil-more').mouseleave(function () {
-            gsap.to($('.mil-ball .mil-more-text'), .2, {
+        $('.Flux-more').mouseleave(function () {
+            gsap.to($('.Flux-ball .Flux-more-text'), .2, {
                 scale: '0',
                 ease: 'sine',
             });
         });
 
-        $('.mil-choose').mouseover(function () {
-            gsap.to($('.mil-ball .mil-choose-text'), .2, {
+        $('.Flux-choose').mouseover(function () {
+            gsap.to($('.Flux-ball .Flux-choose-text'), .2, {
                 scale: '1',
                 ease: 'sine',
             });
         });
 
-        $('.mil-choose').mouseleave(function () {
-            gsap.to($('.mil-ball .mil-choose-text'), .2, {
+        $('.Flux-choose').mouseleave(function () {
+            gsap.to($('.Flux-ball .Flux-choose-text'), .2, {
                 scale: '0',
                 ease: 'sine',
             });
         });
 
-        $('a:not(".mil-choose , .mil-more , .mil-drag , .mil-accent-cursor"), input , textarea, .mil-accordion-menu').mouseover(function () {
+        $('a:not(".Flux-choose , .Flux-more , .Flux-drag , .Flux-accent-cursor"), input , textarea, .Flux-accordion-menu').mouseover(function () {
             gsap.to($(cursor), .2, {
                 scale: 0,
                 ease: 'sine',
             });
-            gsap.to($('.mil-ball svg'), .2, {
+            gsap.to($('.Flux-ball svg'), .2, {
                 scale: 0,
             });
         });
 
-        $('a:not(".mil-choose , .mil-more , .mil-drag , .mil-accent-cursor"), input, textarea, .mil-accordion-menu').mouseleave(function () {
+        $('a:not(".Flux-choose , .Flux-more , .Flux-drag , .Flux-accent-cursor"), input, textarea, .Flux-accordion-menu').mouseleave(function () {
             gsap.to($(cursor), .2, {
                 scale: 1,
                 ease: 'sine',
             });
 
-            gsap.to($('.mil-ball svg'), .2, {
+            gsap.to($('.Flux-ball svg'), .2, {
                 scale: 1,
             });
         });
@@ -816,11 +816,11 @@ $(function () {
         main menu
 
         ***************************/
-        $('.mil-has-children a').on('click', function () {
-            $('.mil-has-children ul').removeClass('mil-active');
-            $('.mil-has-children a').removeClass('mil-active');
-            $(this).toggleClass('mil-active');
-            $(this).next().toggleClass('mil-active');
+        $('.Flux-has-children a').on('click', function () {
+            $('.Flux-has-children ul').removeClass('Flux-active');
+            $('.Flux-has-children a').removeClass('Flux-active');
+            $(this).toggleClass('Flux-active');
+            $(this).next().toggleClass('Flux-active');
         });
         /***************************
 
@@ -828,7 +828,7 @@ $(function () {
 
         ***************************/
 
-        const appearance = document.querySelectorAll(".mil-up");
+        const appearance = document.querySelectorAll(".Flux-up");
 
         appearance.forEach((section) => {
             gsap.fromTo(section, {
@@ -849,7 +849,7 @@ $(function () {
             });
         });
 
-        const scaleImage = document.querySelectorAll(".mil-scale");
+        const scaleImage = document.querySelectorAll(".Flux-scale");
 
         scaleImage.forEach((section) => {
             var value1 = $(section).data("value-1");
@@ -868,7 +868,7 @@ $(function () {
             });
         });
 
-        const parallaxImage = document.querySelectorAll(".mil-parallax");
+        const parallaxImage = document.querySelectorAll(".Flux-parallax");
 
 
         if ($(window).width() > 960) {
@@ -890,7 +890,7 @@ $(function () {
             });
         }
 
-        const rotate = document.querySelectorAll(".mil-rotate");
+        const rotate = document.querySelectorAll(".Flux-rotate");
 
         rotate.forEach((section) => {
             var value = $(section).data("value");
@@ -929,11 +929,11 @@ $(function () {
 
         ***************************/
 
-        var menu = ['<div class="mil-custom-dot mil-slide-1"></div>', '<div class="mil-custom-dot mil-slide-2"></div>', '<div class="mil-custom-dot mil-slide-3"></div>', '<div class="mil-custom-dot mil-slide-4"></div>', '<div class="mil-custom-dot mil-slide-5"></div>', '<div class="mil-custom-dot mil-slide-6"></div>', '<div class="mil-custom-dot mil-slide-7"></div>']
-        var mySwiper = new Swiper('.mil-reviews-slider', {
+        var menu = ['<div class="Flux-custom-dot Flux-slide-1"></div>', '<div class="Flux-custom-dot Flux-slide-2"></div>', '<div class="Flux-custom-dot Flux-slide-3"></div>', '<div class="Flux-custom-dot Flux-slide-4"></div>', '<div class="Flux-custom-dot Flux-slide-5"></div>', '<div class="Flux-custom-dot Flux-slide-6"></div>', '<div class="Flux-custom-dot Flux-slide-7"></div>']
+        var mySwiper = new Swiper('.Flux-reviews-slider', {
             // If we need pagination
             pagination: {
-                el: '.mil-revi-pagination',
+                el: '.Flux-revi-pagination',
                 clickable: true,
                 renderBullet: function (index, className) {
                     return '<span class="' + className + '">' + (menu[index]) + '</span>';
@@ -943,8 +943,8 @@ $(function () {
             effect: 'fade',
             parallax: true,
             navigation: {
-                nextEl: '.mil-revi-next',
-                prevEl: '.mil-revi-prev',
+                nextEl: '.Flux-revi-next',
+                prevEl: '.Flux-revi-prev',
             },
         })
 
@@ -953,7 +953,7 @@ $(function () {
         infinite slider
 
         ***************************/
-        var swiper = new Swiper('.mil-infinite-show', {
+        var swiper = new Swiper('.Flux-infinite-show', {
             slidesPerView: 2,
             spaceBetween: 30,
             speed: 5000,
@@ -975,7 +975,7 @@ $(function () {
         portfolio slider
 
         ***************************/
-        var swiper = new Swiper('.mil-portfolio-slider', {
+        var swiper = new Swiper('.Flux-portfolio-slider', {
             slidesPerView: 1,
             spaceBetween: 0,
             speed: 800,
@@ -984,8 +984,8 @@ $(function () {
                 enable: true
             },
             navigation: {
-                nextEl: '.mil-portfolio-next',
-                prevEl: '.mil-portfolio-prev',
+                nextEl: '.Flux-portfolio-next',
+                prevEl: '.Flux-portfolio-prev',
             },
             pagination: {
                 el: '.swiper-portfolio-pagination',
@@ -997,14 +997,14 @@ $(function () {
         1 item slider
 
         ***************************/
-        var swiper = new Swiper('.mil-1-slider', {
+        var swiper = new Swiper('.Flux-1-slider', {
             slidesPerView: 1,
             spaceBetween: 30,
             speed: 800,
             parallax: true,
             navigation: {
-                nextEl: '.mil-portfolio-next',
-                prevEl: '.mil-portfolio-prev',
+                nextEl: '.Flux-portfolio-next',
+                prevEl: '.Flux-portfolio-prev',
             },
             pagination: {
                 el: '.swiper-portfolio-pagination',
@@ -1016,14 +1016,14 @@ $(function () {
         2 item slider
 
         ***************************/
-        var swiper = new Swiper('.mil-2-slider', {
+        var swiper = new Swiper('.Flux-2-slider', {
             slidesPerView: 1,
             spaceBetween: 30,
             speed: 800,
             parallax: true,
             navigation: {
-                nextEl: '.mil-portfolio-next',
-                prevEl: '.mil-portfolio-prev',
+                nextEl: '.Flux-portfolio-next',
+                prevEl: '.Flux-portfolio-prev',
             },
             pagination: {
                 el: '.swiper-portfolio-pagination',
