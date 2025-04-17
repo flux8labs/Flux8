@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-
 <head>
 
     <meta charset="UTF-8">
@@ -39,6 +38,24 @@
             <div class="Flux-choose-text">Сhoose</div>
         </div>
         <!-- cursor end -->
+
+        <!-- preloader -->
+        <div class="Flux-preloader">
+            <div class="Flux-preloader-animation">
+                <div class="Flux-pos-abs Flux-animation-1">
+                    <p class="Flux-h3 Flux-muted Flux-thin">Pioneering</p>
+                    <p class="Flux-h3 Flux-muted">Creative</p>
+                    <p class="Flux-h3 Flux-muted Flux-thin">Excellence</p>
+                </div>
+                <div class="Flux-pos-abs Flux-animation-2">
+                    <div class="Flux-reveal-frame">
+                        <p class="Flux-reveal-box"></p>
+                        <p class="Flux-h3 Flux-muted Flux-thin">Flux8Labs.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- preloader end -->
 
         <!-- scrollbar progress -->
         <div class="Flux-progress-track">
@@ -81,6 +98,7 @@
                                     </li>
                                     <li class="Flux-has-children">
                                         <a href="services.html">Services</a>
+                                        
                                     </li>
                                     <li class="Flux-has-children Flux-active">
                                         <a href="blog.html">Blog List</a>
@@ -90,7 +108,7 @@
                                     </ul> -->
                                     </li>
                                     <li class="Flux-has-children">
-                                        <a href="#.">Other pages</a>
+                                        <a href="#.">Learn More</a>
                                         <ul>
                                             <li><a href="team.html">Team</a></li>
                                             <li><a href="contact.html">Contact</a></li>
@@ -203,57 +221,43 @@
                             <ul class="Flux-breadcrumbs Flux-mb-60">
                                 <li><a href="index.html">Homepage</a></li>
                                 <li><a href="blog.html">Blog</a></li>
+                                <!-- <li><a href="blog-inner.html">Category page</a></li> -->
                             </ul>
-                            <h1 class="Flux-mb-60">Exploring <span class="Flux-thin">the World</span> <br> Through Our <span class="Flux-thin">Blog</span></h1>
+                            <h1 class="Flux-mb-60">Tech  <br>Talks <span class="Flux-thin">& More</span></h1>
                             <a href="#blog" class="Flux-link Flux-dark Flux-arrow-place Flux-down-arrow">
-                                <span>Publications</span>
+                                <span>Dev Diaries</span>
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- banner end -->
 
-                <!-- popular -->
-                <section class="Flux-soft-bg" id="blog">
-                    <div class="container Flux-p-120-60">
+                <!-- blog -->
+                <section id="blog">
+                    <div class="container Flux-p-120-120">
                         <div class="row align-items-center Flux-mb-30">
-                            <div class="col-lg-6 Flux-mb-30">
-                                <h3 class="Flux-up">Popular Publications:</h3>
+                            <div class="col-lg-4 Flux-mb-30">
+                                <h3 class="Flux-up">From the Flux8 Labs Team:</h3>
                             </div>
-                            <div class="col-lg-6 Flux-mb-30">
+                            <!-- <div class="col-lg-8 Flux-mb-30">
                                 <div class="Flux-adaptive-right Flux-up">
-                                    <a href="blog-inner.html" class="Flux-link Flux-dark Flux-arrow-place">
-                                        <span>View all</span>
-                                    </a>
+
+                                    <ul class="Flux-category-list">
+                                        <li><a href="blog-inner.html">Design</a></li>
+                                        <li><a href="blog-inner.html">Art</a></li>
+                                        <li><a href="blog-inner.html">Code</a></li>
+                                        <li><a href="blog-inner.html" class="Flux-active">Technology</a></li>
+                                        <li><a href="blog-inner.html">All categories</a></li>
+                                    </ul>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
 
-                                <a href="blogs/react-beginners-guide-learn-what-matters.html" class="Flux-blog-card Flux-mb-60">
+                                <a href="publication.html" class="Flux-blog-card Flux-blog-card-hori Flux-more Flux-mb-60">
                                     <div class="Flux-cover-frame Flux-up">
-                                        <img src="img/blog/react-beginners-guide-learn-what-matters.webp" alt="cover">
-                                    </div>
-                                    <div class="Flux-post-descr">
-                                        <div class="Flux-labels Flux-up Flux-mb-30">
-                                            <div class="Flux-label Flux-upper Flux-accent">TECHNOLOGY</div>
-                                            <div class="Flux-label Flux-upper">dec 5 2024</div>
-                                        </div>
-                                        <h4 class="Flux-up Flux-mb-30">React Beginners Guide — Learn What Matters</h4>
-                                        <p class="Flux-post-text Flux-up Flux-mb-30">Starting with React can feel overwhelming, but it doesn’t have to be. This beginner-friendly guide is designed to help you focus on what truly matters — from setting up your React environment the right way, to understanding JSX, organizing your folders, and using essential tools that make development easier and faster.</p>
-                                        <div class="Flux-link Flux-dark Flux-arrow-place Flux-up">
-                                            <span>Read more</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="col-lg-6">
-
-                                <a href="blogs/coding-best-practices.html" class="Flux-blog-card Flux-mb-60">
-                                    <div class="Flux-cover-frame Flux-up">
-                                        <img src="img/blog/coding-best-practices.webp" alt="cover">
+                                        <img src="img/blog/1.webp" alt="cover">
                                     </div>
                                     <div class="Flux-post-descr">
                                         <div class="Flux-labels Flux-up Flux-mb-30">
@@ -269,45 +273,19 @@
                                 </a>
 
                             </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- popular end -->
-<hr>
-                <!-- blog -->
-                <!-- <section>
-                    <div class="container Flux-p-120-120">
-                        <div class="row align-items-center Flux-mb-30">
-                            <div class="col-lg-4 Flux-mb-30">
-                                <h3 class="Flux-up">Categories:</h3>
-                            </div>
-                            <div class="col-lg-8 Flux-mb-30">
-                                <div class="Flux-adaptive-right Flux-up">
-
-                                    <ul class="Flux-category-list">
-                                        <li><a href="blog-inner.html">Design</a></li>
-                                        <li><a href="blog-inner.html">Art</a></li>
-                                        <li><a href="blog-inner.html">Code</a></li>
-                                        <li><a href="blog-inner.html">Technology</a></li>
-                                        <li><a href="blog-inner.html" class="Flux-active">All categories</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="col-lg-12">
 
                                 <a href="publication.html" class="Flux-blog-card Flux-blog-card-hori Flux-more Flux-mb-60">
                                     <div class="Flux-cover-frame Flux-up">
-                                        <img src="img/blog/3.jpg" alt="cover">
+                                        <img src="img/blog/2.webp" alt="cover">
                                     </div>
                                     <div class="Flux-post-descr">
                                         <div class="Flux-labels Flux-up Flux-mb-30">
                                             <div class="Flux-label Flux-upper Flux-accent">TECHNOLOGY</div>
-                                            <div class="Flux-label Flux-upper">may 24 2023</div>
+                                            <div class="Flux-label Flux-upper">may 31 2024</div>
                                         </div>
-                                        <h4 class="Flux-up Flux-mb-30">How to Create a Brand Guide for Your Client</h4>
-                                        <p class="Flux-post-text Flux-up Flux-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p>
+                                        <h4 class="Flux-up Flux-mb-30">Coding Best Practices — Write Clean Code</h4>
+                                        <p class="Flux-post-text Flux-up Flux-mb-30">Clean code is the foundation of a robust, maintainable software project. It’s code that’s easy to understand, modify, and extend. It’s not just about making it work; it’s about making it work well, both now and in the future.</p>
                                         <div class="Flux-link Flux-dark Flux-arrow-place Flux-up">
                                             <span>Read more</span>
                                         </div>
@@ -319,21 +297,59 @@
 
                                 <a href="publication.html" class="Flux-blog-card Flux-blog-card-hori Flux-more Flux-mb-60">
                                     <div class="Flux-cover-frame Flux-up">
-                                        <img src="img/blog/4.jpg" alt="cover">
+                                        <img src="img/blog/3.webp" alt="cover">
                                     </div>
                                     <div class="Flux-post-descr">
                                         <div class="Flux-labels Flux-up Flux-mb-30">
                                             <div class="Flux-label Flux-upper Flux-accent">TECHNOLOGY</div>
-                                            <div class="Flux-label Flux-upper">may 24 2023</div>
+                                            <div class="Flux-label Flux-upper">mar 23 2025</div>
                                         </div>
-                                        <h4 class="Flux-up Flux-mb-30">Color Psychology in Art and Design</h4>
-                                        <p class="Flux-post-text Flux-up Flux-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p>
+                                        <h4 class="Flux-up Flux-mb-30">Master JavaScript with My Handwritten Notes & Code Repository</h4>
+                                        <p class="Flux-post-text Flux-up Flux-mb-30">JavaScript is the foundation of web development, but learning it properly can feel overwhelming. That’s why I’ve created JavaScript Mastery Hub — a structured GitHub repository that combines handwritten notes, interactive</p>
                                         <div class="Flux-link Flux-dark Flux-arrow-place Flux-up">
                                             <span>Read more</span>
                                         </div>
                                     </div>
                                 </a>
 
+                            </div>
+                            <div class="col-lg-12">
+
+                                <a href="publication.html" class="Flux-blog-card Flux-blog-card-hori Flux-more Flux-mb-60">
+                                    <div class="Flux-cover-frame Flux-up">
+                                        <img src="img/blog/4.webp" alt="cover">
+                                    </div>
+                                    <div class="Flux-post-descr">
+                                        <div class="Flux-labels Flux-up Flux-mb-30">
+                                            <div class="Flux-label Flux-upper Flux-accent">TECHNOLOGY</div>
+                                            <div class="Flux-label Flux-upper">feb 16 2023</div>
+                                        </div>
+                                        <h4 class="Flux-up Flux-mb-30">The Fundamentals of Artificial Intelligence and ML</h4>
+                                        <p class="Flux-post-text Flux-up Flux-mb-30">If you’ve ever used a spam filter, talked to Siri, or watched Netflix recommend your next binge-worthy show, you’ve encountered artificial intelligence (AI) in action. But what exactly makes</p>
+                                        <div class="Flux-link Flux-dark Flux-arrow-place Flux-up">
+                                            <span>Read more</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-12">
+
+                                <a href="publication.html" class="Flux-blog-card Flux-blog-card-hori Flux-more Flux-mb-60">
+                                    <div class="Flux-cover-frame Flux-up">
+                                        <img src="img/blog/6.jpg" alt="cover">
+                                    </div>
+                                    <div class="Flux-post-descr">
+                                        <div class="Flux-labels Flux-up Flux-mb-30">
+                                            <div class="Flux-label Flux-upper Flux-accent">TECHNOLOGY</div>
+                                            <div class="Flux-label Flux-upper">may 24 2023</div>
+                                        </div>
+                                        <h4 class="Flux-up Flux-mb-30">How to Never Reach Creative Burnout</h4>
+                                        <p class="Flux-post-text Flux-up Flux-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p>
+                                        <div class="Flux-link Flux-dark Flux-arrow-place Flux-up">
+                                            <span>Read more</span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-lg-12">
 
@@ -356,26 +372,6 @@
 
                             </div>
                             <div class="col-lg-12">
-
-                                <a href="publication.html" class="Flux-blog-card Flux-blog-card-hori Flux-more Flux-mb-60">
-                                    <div class="Flux-cover-frame Flux-up">
-                                        <img src="img/blog/6.jpg" alt="cover">
-                                    </div>
-                                    <div class="Flux-post-descr">
-                                        <div class="Flux-labels Flux-up Flux-mb-30">
-                                            <div class="Flux-label Flux-upper Flux-accent">TECHNOLOGY</div>
-                                            <div class="Flux-label Flux-upper">may 24 2023</div>
-                                        </div>
-                                        <h4 class="Flux-up Flux-mb-30">How to Never Reach Creative Burnout</h4>
-                                        <p class="Flux-post-text Flux-up Flux-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p>
-                                        <div class="Flux-link Flux-dark Flux-arrow-place Flux-up">
-                                            <span>Read more</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="col-lg-12">
                                 <div class="Flux-pagination">
                                     <a href="blog-inner.html" class="Flux-pagination-btn Flux-active">1</a>
                                     <a href="blog-inner.html" class="Flux-pagination-btn">2</a>
@@ -386,7 +382,7 @@
                             </div>
                         </div>
                     </div>
-                </section> -->
+                </section>
                 <!-- blog end -->
 
                 <!-- call to action -->
